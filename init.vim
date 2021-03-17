@@ -347,7 +347,7 @@ endfun
 map <F10> :call SynGroup()<CR>
 
 " Compile function  修改
-noremap <F1> :call CompileRunGcc()<CR>
+noremap <LEADER>rr :call CompileRunGcc()<CR>
 func! CompileRunGcc()
 	exec "w"
 	if &filetype == 'c'
