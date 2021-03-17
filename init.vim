@@ -886,23 +886,23 @@ endfunc
 " ===
 "let g:VM_theme             = 'iceblue'
 "let g:VM_default_mappings = 0
-let g:VM_leader                     = {'default': ',', 'visual': ',', 'buffer': ','}
-let g:VM_maps                       = {}
-let g:VM_custom_motions             = {'n': 'h', 'i': 'l', 'u': 'k', 'e': 'j', 'N': '0', 'I': '$', 'h': 'e'}
-let g:VM_maps['i']                  = 'k'
-let g:VM_maps['I']                  = 'K'
-let g:VM_maps['Find Under']         = '<C-k>'
-let g:VM_maps['Find Subword Under'] = '<C-k>'
-let g:VM_maps['Find Next']          = ''
-let g:VM_maps['Find Prev']          = ''
-let g:VM_maps['Remove Region']      = 'q'
-let g:VM_maps['Skip Region']        = '<c-n>'
-let g:VM_maps["Undo"]               = 'l'
-let g:VM_maps["Redo"]               = '<C-r>'
+"let g:VM_leader                     = {'default': ',', 'visual': ',', 'buffer': ','}
+"let g:VM_maps                       = {}
+""let g:VM_custom_motions             = {'n': 'h', 'i': 'l', 'u': 'k', 'e': 'j', 'N': '0', 'I': '$', 'h': 'e'}
+"let g:VM_maps['i']                  = 'k'
+"let g:VM_maps['I']                  = 'K'
+"let g:VM_maps['Find Under']         = '<C-k>'
+"let g:VM_maps['Find Subword Under'] = '<C-k>'
+"let g:VM_maps['Find Next']          = ''
+"let g:VM_maps['Find Prev']          = ''
+"let g:VM_maps['Remove Region']      = 'q'
+"let g:VM_maps['Skip Region']        = '<c-n>'
+"let g:VM_maps["Undo"]               = 'l'
+"let g:VM_maps["Redo"]               = '<C-r>'
 
 
 " ===
-" === Far.vim
+" === Far.vim 不知道有什么用
 " ===
 noremap <LEADER>f :F  **/*<left><left><left><left><left>
 let g:far#mapping = {
@@ -954,7 +954,7 @@ let g:vista#renderer#icons = {
 let g:scrollstatus_size = 15
 
 " ===
-" === fzf-gitignore
+" === fzf-gitignore 不懂
 " ===
 noremap <LEADER>gi :FzfGitignore<CR>
 
@@ -991,24 +991,24 @@ let maplocalleader=' '
 " ===
 " === vim-calendar
 " ===
-"noremap \c :Calendar -position=here<CR>
+noremap \c :Calendar -position=here<CR>
 noremap \\ :Calendar -view=clock -position=here<CR>
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 augroup calendar-mappings
 	autocmd!
 	" diamond cursor
-	autocmd FileType calendar nmap <buffer> u <Plug>(calendar_up)
-	autocmd FileType calendar nmap <buffer> n <Plug>(calendar_left)
-	autocmd FileType calendar nmap <buffer> e <Plug>(calendar_down)
-	autocmd FileType calendar nmap <buffer> i <Plug>(calendar_right)
-	autocmd FileType calendar nmap <buffer> <c-u> <Plug>(calendar_move_up)
-	autocmd FileType calendar nmap <buffer> <c-n> <Plug>(calendar_move_left)
-	autocmd FileType calendar nmap <buffer> <c-e> <Plug>(calendar_move_down)
-	autocmd FileType calendar nmap <buffer> <c-i> <Plug>(calendar_move_right)
-	autocmd FileType calendar nmap <buffer> k <Plug>(calendar_start_insert)
-	autocmd FileType calendar nmap <buffer> K <Plug>(calendar_start_insert_head)
-	" unmap <C-n>, <C-p> for other plugins
+	autocmd FileType calendar nmap <buffer> k <Plug>(calendar_up)
+	autocmd FileType calendar nmap <buffer> h <Plug>(calendar_left)
+	autocmd FileType calendar nmap <buffer> j <Plug>(calendar_down)
+	autocmd FileType calendar nmap <buffer> l <Plug>(calendar_right)
+	autocmd FileType calendar nmap <buffer> <c-k> <Plug>(calendar_move_up)
+	autocmd FileType calendar nmap <buffer> <c-h> <Plug>(calendar_move_left)
+	autocmd FileType calendar nmap <buffer> <c-j> <Plug>(calendar_move_down)
+	autocmd FileType calendar nmap <buffer> <c-l> <Plug>(calendar_move_right)
+	autocmd FileType calendar nmap <buffer> i <Plug>(calendar_start_insert)
+	autocmd FileType calendar nmap <buffer> I <Plug>(calendar_start_insert_head)
+	" unmap <C-n>, <C-p> for other plugins 不动
 	autocmd FileType calendar nunmap <buffer> <C-n>
 	autocmd FileType calendar nunmap <buffer> <C-p>
 augroup END
@@ -1327,8 +1327,8 @@ let g:dartfmt_options = ["-l 100"]
 
 " ===
 " === tcomment_vim
-" ===
-nnoremap ci cl
+" === "待修改"
+"nnoremap ci cl
 let g:tcomment_textobject_inlinecomment = ''
 nmap <LEADER>cn g>c
 vmap <LEADER>cn g>
@@ -1345,7 +1345,7 @@ let g:move_key_modifier = 'C'
 " ===
 " === any-jump
 " ===
-nnoremap j :AnyJump<CR>
+nnoremap gg :AnyJump<CR>
 let g:any_jump_window_width_ratio  = 0.8
 let g:any_jump_window_height_ratio = 0.9
 
