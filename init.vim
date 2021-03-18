@@ -217,7 +217,7 @@ noremap <C-K> 5<C-y>
 noremap <C-J> 5<C-e>
 
 
-source $HOME/.config/nvim/cursor.vim
+source $HOME/.config/nvim/cursor_for_qwerty.vim
 
 " ===
 " === Insert Mode Cursor Movement
